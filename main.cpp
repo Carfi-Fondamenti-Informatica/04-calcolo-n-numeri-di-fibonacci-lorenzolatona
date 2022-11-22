@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-   int i, n, primo = 1, secondo = 1, terzo;
+int main () {
+    int i, n, primo = 1, secondo = 1, terzo;
 
     do {
         cin >> n;
@@ -20,5 +20,6 @@ int main() {
         secondo=terzo;
         cout<<terzo<<endl;
     }
-   return 0;
+
+    return 0;
 }
