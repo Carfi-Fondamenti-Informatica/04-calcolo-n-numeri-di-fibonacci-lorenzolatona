@@ -1,25 +1,24 @@
 #include <iostream>
 using namespace std;
 
-int main () {
-    int i, n, primo = 1, secondo = 1, terzo;
-
-    do {
-        cin >> n;
-        if (n<2)
-            cout<<"errore"<<endl;
-    } while (n < 2);
-
-    cout << primo << endl;
-    cout << secondo << endl;
 
 
-    for(i=2;i<n;i++){
-        terzo=primo+secondo;
-        primo=secondo;
-        secondo=terzo;
-        cout<<terzo<<endl;
+int main() {
+    int n = 0;
+    int f = 1, f1 = 1;
+    cin >> n;
+    if (n >= 2) {
+        cout << f << endl;
+        cout << f1 << endl;
+        for (int i = 1; i < n - 1; i++) {
+            int temp = f;
+            f += f1;
+            f1 = temp;
+            cout << f << endl;
+        }
+    } else {
+        cout << "errore" << endl;
     }
-
     return 0;
 }
+
